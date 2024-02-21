@@ -1,0 +1,14 @@
+12.12.2023 - uvodne stretnutie a pokyny
+- samostatne stretnutia raz do tyzdna
+- do nasledujuceho: vytvorit a zdielat folder
+- preferujem pisanie v LaTex
+- zamysliet sa nad strukturou prace
+- clanky stahovat + generovat bibTex
+- nebad sa pouzivat internetove clanky - nebrat ich ako uznanu akademicku pravdu
+- po precitani clanku odrazkovo suhrn zaujimavych myslienok
+- literatura na uvod:
+	- backend micro: https://martinfowler.com/articles/microservices.html
+	- survey: https://www.sciencedirect.com/science/article/pii/S0950584921000549
+		  https://www.researchgate.net/publication/351282486_Micro-frontends_application_of_microservices_to_web_front-ends
+	- podobna dp: https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1570726&dswid=979
+10.1.2024 14:00

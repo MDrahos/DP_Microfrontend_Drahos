@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "serve": "npx http-server -o dist",
+        "build": "npx tsc --outDir dist",
+        "watch": "npx tsc --watch --outDir dist"
+    }
+}

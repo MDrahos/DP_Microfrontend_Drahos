@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TypeScript Web Component</title>
+  <script src="http://127.0.0.1:8080/dist/index.js"></script>
+  <script src="http://127.0.0.1:8081/dist/index.js"></script>
+</head>
+<body>  
+
+  <custom-input-component output_id="output-text"></custom-input-component>
+<hello-world text="test" id="output-text"></hello-world>
+<script>document.addEventListener('input-changed',(e)=>{document.getElementById(e.detail.output_id).setAttribute("text",e.detail.text);})</script>
+</body>
+</html>

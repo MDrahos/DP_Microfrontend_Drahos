@@ -1,6 +1,6 @@
 
 
-class MyCustomElement extends HTMLElement {
+class OutputWebComponent extends HTMLElement {
   static get observedAttributes() {
     return ['text'];
   }
@@ -10,7 +10,6 @@ class MyCustomElement extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.addEventListener('input-changed',(e)=>console.log(e))
   }
 
 
@@ -22,11 +21,17 @@ class MyCustomElement extends HTMLElement {
   render() {
     this.shadowRoot!.innerHTML = `
             <style>
+              p {
+                margin: 10px 50px;
+              }
               :host {
                 display: block;
-                font-family: sans-serif;
+                
+                border: 2px dotted blue;
+                width: 50%;
               }
             </style>
+            <p>Output webcomponent</p>
             <p>${this.text}</p>
           `;
   }
@@ -40,6 +45,6 @@ class MyCustomElement extends HTMLElement {
 
 }
 // Register the custom element
-customElements.define('hello-world', MyCustomElement);
+customElements.define('custom-output-component', OutputWebComponent);
 
 

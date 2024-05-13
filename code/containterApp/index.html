@@ -11,7 +11,7 @@
 <body>  
 
   <custom-input-component output_id="output-text"></custom-input-component>
-<hello-world text="test" id="output-text"></hello-world>
+<custom-output-component text="test" id="output-text"></custom-output-component>
 <script>document.addEventListener('input-changed',(e)=>{document.getElementById(e.detail.output_id).setAttribute("text",e.detail.text);})</script>
 </body>
 </html>

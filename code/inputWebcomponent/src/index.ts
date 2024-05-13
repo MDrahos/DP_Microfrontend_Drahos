@@ -1,13 +1,18 @@
 
 
 class InputWebComponent extends HTMLElement {
+  _div: HTMLDivElement;
   _input: HTMLInputElement;
   output_id:string ="";
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this._div = document.createElement('div');
+    this._div.classList.add("inputWebComponent");
+    this._div.innerHTML="<p>Input Webcomponent</p>"
     this._input=document.createElement('input');
-    this._input.addEventListener("focusout",this._focusOutHandler.bind(this))
+    this._input.addEventListener("focusout",this._focusOutHandler.bind(this));
+    this._div.appendChild(this._input);
   }
 
 
@@ -18,7 +23,10 @@ class InputWebComponent extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot!.append(this._input)
+    this.shadowRoot!.append(this._div)
+    const sheet = new CSSStyleSheet();
+    sheet.replaceSync("div { border: 2px dotted red; width: 50%} p {margin-left: 50px} input{ margin: 10px 50px; width: 80%}");
+    this.shadowRoot!.adoptedStyleSheets = [sheet];
   }
 
   _focusOutHandler(){
